@@ -4,11 +4,11 @@ def get_first_player_choice(current_round, your_score, enemy_score, your_choices
     if functionname == "get_first_player_choice":
         source_code = inspect.getsource(get_second_player_choice)
         exec(source_code)
-        return min(max(get_second_player_choice(current_round, your_score, enemy_score, your_choices, enemy_choices) -1, 20), 100)
+        return min(max(get_second_player_choice(current_round, your_score, enemy_score, your_choices, enemy_choices) -10, 20), 100)
     elif functionname == "get_second_player_choice":
         source_code = inspect.getsource(get_first_player_choice)
         exec(source_code)
-        return min(max(get_first_player_choice(current_round, your_score, enemy_score, your_choices, enemy_choices) -1, 20), 100)
+        return min(max(get_first_player_choice(current_round, your_score, enemy_score, your_choices, enemy_choices) -10, 20), 100)
     else:
         return 20
 def get_second_player_choice(current_round, your_score, enemy_score, your_choices, enemy_choices):
